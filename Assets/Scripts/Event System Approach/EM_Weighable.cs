@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Weighable : MassAggregator
+public class EM_Weighable : EM_MassAggregator
 {
-    [SerializeField] private WeighableParametersStruct weighableParametersStruct;
-    private WeighableParameters weighableParameters;
-    private MassAggregator massAggregator = null;
+    [SerializeField] private EM_WeighableParametersStruct weighableParametersStruct;
+    private EM_WeighableParameters weighableParameters;
+    private EM_MassAggregator massAggregator = null;
     private GameObject scaleBucket = null;
     private GameObject otherWeighable = null;
 

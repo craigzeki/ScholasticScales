@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MassAggregator : MonoBehaviour
+public class EM_MassAggregator : MonoBehaviour
 {
     private UnityAction<string> addMassEventListener;
     private UnityAction<string> removeMassEventListener;
@@ -29,7 +29,7 @@ public class MassAggregator : MonoBehaviour
 
     private void AddMass(string jsonVars)
     {
-        WeighableParameters weighableParameters = ScriptableObject.CreateInstance<WeighableParameters>();
+        EM_WeighableParameters weighableParameters = ScriptableObject.CreateInstance<EM_WeighableParameters>();
         JsonUtility.FromJsonOverwrite(jsonVars, weighableParameters);
         aggregatedMass += weighableParameters.weighableParametersStruct.mass;
 
@@ -37,7 +37,7 @@ public class MassAggregator : MonoBehaviour
 
     private void RemoveMass(string jsonVars)
     {
-        WeighableParameters weighableParameters = ScriptableObject.CreateInstance<WeighableParameters>();
+        EM_WeighableParameters weighableParameters = ScriptableObject.CreateInstance<EM_WeighableParameters>();
         JsonUtility.FromJsonOverwrite(jsonVars, weighableParameters);
         aggregatedMass -= weighableParameters.weighableParametersStruct.mass;
         if (aggregatedMass < 0) aggregatedMass = 0;

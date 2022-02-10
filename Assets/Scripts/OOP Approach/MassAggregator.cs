@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gravity : MonoBehaviour
+public class MassAggregator
 {
-    [SerializeField] float myGravity = 10.0f;
+    private float trackedMass;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +14,11 @@ public class Gravity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y - (myGravity * Time.deltaTime), transform.position.z);
+        
+    }
+
+    private void addMass()
+    {
+
     }
 }
