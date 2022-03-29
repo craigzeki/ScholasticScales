@@ -50,6 +50,7 @@ public class DragAndDrop : MonoBehaviour
         iDragComponent?.onStartDrag();
         //get the initial distance from the screen, we will use this later to enforce the distance does not change while dragging
         float initialDistanceFromScreen = Vector3.Distance(gameObject.transform.position, Camera.main.transform.position);
+        //float initialDistanceFromScreen = Vector3.Distance(gameObject.transform.position, Camera.main.nearClipPlane);
 
         //while the mouse button is down
         while (mouseClicked.ReadValue<float>() != 0)
