@@ -1,13 +1,16 @@
-using System.Collections.Generic;
-using UnityEngine.Events;
-using UnityEngine;
-
+//Author: Craig Zeki
+//Student ID: zek21003166
 
 /*
 Event messaging system for Unity with flexible parameter passing
 Code is 99% from the untiy tutorial here: https://unity3d.com/learn/tutorials/topics/scripting/events-creating-simple-messaging-system
 the other 1% is from this forum post: https://forum.unity.com/threads/messaging-system-passing-parameters-with-the-event.331284/
 */
+
+using System.Collections.Generic;
+using UnityEngine.Events;
+using UnityEngine;
+
 
 
 
